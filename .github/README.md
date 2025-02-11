@@ -6,6 +6,31 @@ in my macOS and Linux home directory. This is to avoid accidentally checking in
 anything under `$HOME` which is not explicitly tracked.
 MIT License
 
+## Setup on a new machine
+
+Clone the repository with fetch on HTTPS (anyone can fetch without authentication)
+but push on the git protocol (needs authentication).
+
+```console
+$ cd
+$ mkdir -p repositories/
+$ cd repositories/
+$ git clone --bare https://github.com/peterjc/dotfiles.git
+$ cd dotfiles.git
+$ git remote set-url origin --push git@github.com:peterjc/dotfiles.git
+$ git config --local status.showUntrackedFiles no
+```
+
+We will be using an alias for running git with this repositroy, and that should be
+added to the `.zshrc` and/or `.bash_profile`:
+
+```console
+$ alias dotfiles-git='git --git-dir=$HOME/repositories/dotfiles.git/ --work-tree=$HOME'
+````
+
+Note this does not hard code where `git` is to be found, which could be a system
+level install or a more recent version via conda for example.
+
 ## License
 
 Copyright (c) 2025 Peter Cock
