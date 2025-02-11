@@ -1,0 +1,166 @@
+theme="dracula"
+
+[editor]
+bufferline="always"
+cursorline=true
+# cursorcolumn=true
+color-modes=true
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+nbsp = "all"
+nnbsp = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = " "
+# If tabpad="." then tabs will look like "→···" (depending on tab width)
+
+[editor.cursor-shape]
+insert = "block"
+normal = "block"
+select = "underline"
+
+# At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
+[keys.normal]
+# Try and support some standard Apple shortcuts:
+Meta-s = ":write" # Map Apple+s to the typable command :w which is an alias for :write (save file)
+Meta-f = "search"
+Meta-o = "file_picker_in_current_directory"
+C-s = ":write"  # replacing jump shortcut
+C-o = "file_picker_in_current_directory"  # replacing jump shortcut
+C-i = "no_op"  # disable jump shortcut
+C-x = ":buffer-close"
+C-q = ":quit-all"
+C-g = ":goto"  # goto line number
+# Copy alternative to Meta+c which gets eaten by Ghostty (?)
+C-c = "yank_to_clipboard"
+# Paste alternative for symmetry, Meta+v works via Ghostty:
+C-v = "paste_clipboard_before"
+
+# Not working in Ghostty, which captures these shortcuts itself:
+# Meta-w = ":q" # Map Apple+w to :quit
+# Meta-q = ":q" # Map Apple+q to :quit
+# Meta-c
+# Meta-p
+
+# readline shortcuts (want in BOTH normal and insert modes)
+C-p = "move_visual_line_up"  # ctrl+p acts like up in bash (last history item)
+C-n = "move_visual_line_down"  # ctrl+n acts like down
+C-b = "move_char_left"
+C-f = "move_char_right"
+C-a = "goto_line_start"
+C-e = "goto_line_end_newline"
+C-w = "delete_word_backward"  # still a default?
+C-u = "kill_to_line_start"  # still a default?
+C-k = "kill_to_line_end"  # still a default?
+C-h = "delete_char_backward"  # aka backspace, still a default
+C-d = "delete_char_forward"  # still a default?
+
+
+# Misc shortcuts I think sound good:
+"#" = "toggle_comments"
+
+# Alternative to insert mode via i:
+ins = "insert_mode"
+
+# Replace row hjkl ←↓↑→ with inverted-t (jkil, i for up), h now insert here:
+h = "insert_mode"  # remember as 'h' for here?
+j = "move_char_left"
+k = "move_visual_line_down"
+i = "move_visual_line_up"
+l = "move_char_right"  # stays the same!
+
+# These are only in insert mode by default:
+del = "delete_char_forward"
+backspace = "delete_char_backward"
+
+# Not working until disabled in macOS Mission Control keyboard shortcuts
+# C-up = "extend_line_above"
+# C-down = "extend_line_below"
+C-up = "select_line_above"
+C-down = "select_line_below"
+# Based on https://github.com/helix-editor/helix/discussions/5009 and
+# https://github.com/italomaia/helix-non-modal-config/blob/main/config.toml
+C-left = ["move_prev_word_start" , "collapse_selection"]
+#C-right = ["move_next_word_end", "move_char_right"]
+C-right = ["move_next_word_end", "collapse_selection"] # move cursor one word right
+
+# I quite like the default Alt+cursor tree-sitter controls
+
+# Experiment for classic macOS/Windows style:
+# S-up = "extend_line_up"
+# S-down = "extend_line_down"
+S-up = "extend_visual_line_up"
+S-down = "extend_visual_line_down"
+S-left = "extend_char_left"
+S-right = "extend_char_right"
+
+[keys.insert]
+ins = "normal_mode"  # make this toggle between normal and insert modes
+k = { j = "normal_mode" }  # map "k,j" to exit insert mode (like escape)
+ 
+# See also https://github.com/helix-editor/helix/discussions/1211
+# for adding alt+ANY in insert mode to act like ANY in normal mode
+# Breaking modal paradime, but oh well - repeated from normal mode:
+Meta-s = ":write"
+Meta-f = "search"
+Meta-o = "file_picker_in_current_directory"
+C-s = ":write"  # replacing jump shortcut
+C-o = "file_picker_in_current_directory"  # replacing jump shortcut
+C-i = "no_op"  # disable jump shortcut
+C-x = ":buffer-close"
+C-q = ":quit-all"
+C-c = "yank_to_clipboard"
+C-v = "paste_clipboard_before"
+
+# readline shortcuts (want in BOTH normal and insert modes)
+C-p = "move_visual_line_up"  # ctrl+p acts like up in bash (last history item)
+C-n = "move_visual_line_down"  # ctrl+n acts like down
+C-b = "move_char_left"
+C-f = "move_char_right"
+C-a = "goto_line_start"
+C-e = "goto_line_end_newline"
+C-w = "delete_word_backward"  # still a default?
+C-u = "kill_to_line_start"  # still a default?
+C-k = "kill_to_line_end"  # still a default?
+C-h = "delete_char_backward"  # aka backspace, still a default
+C-d = "delete_char_forward"  # still a default?
+
+# Switch directly to command mode, usually just : from normal mode
+# Sadly can't remap colon
+# C-":" = "command_mode"
+
+#Misc
+S-tab = "unindent"  # bind ctrl+< and ctrl+> for this?
+
+#Not working until disabled in macOS Mission Control keyboard shortcuts
+# C-up = "extend_line_above"
+# C-down = "extend_line_below"
+C-up = "select_line_above"
+C-down = "select_line_below"
+# Based on https://github.com/helix-editor/helix/discussions/5009
+C-left = ["move_prev_word_start" , "collapse_selection"]
+C-right = ["move_next_word_end", "move_char_right"]
+
+# Experiment for classic macOS/Windows style:
+S-up = "extend_visual_line_up"
+S-down = "extend_visual_line_down"
+S-left = "extend_char_left"
+S-right = "extend_char_right"
+
+[keys.select]
+# Replace row hjkl ←↓↑→ with inverted-t (jkil, i for up)
+"h" = "no_op"  # Don't think i did anything, so now h is unused
+"j" = "extend_char_left" # Extend selection left (same as left arrow)
+"k" = "extend_visual_line_down" # Extend selection down (same as down arrow)
+"i" = "extend_visual_line_up" # Extend selection up (same as up arrow)
+"l" = "extend_char_right" # Extend selection right (same as right arrow)
+
+esc = ["collapse_selection", "keep_primary_selection", "normal_mode"] # go to the simplest scenario!
