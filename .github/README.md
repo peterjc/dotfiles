@@ -19,6 +19,7 @@ $ git clone --bare https://github.com/peterjc/dotfiles.git
 $ cd dotfiles.git
 $ git remote set-url origin --push git@github.com:peterjc/dotfiles.git
 $ git config --local status.showUntrackedFiles no
+$ git config pull.rebase true
 ```
 
 We will be using an alias for running git with this repositroy, and that should be
