@@ -31,6 +31,15 @@ $ alias dotfiles-git='git --git-dir=$HOME/repositories/dotfiles.git/ --work-tree
 Note this does not hard code where `git` is to be found, which could be a system
 level install or a more recent version via conda for example.
 
+Use this for the initial checkout:
+
+```console
+$ dotfiles-git checkout
+````
+
+On a clean/new account, there should be no conflicts. If you already have some local
+configuration files in place, rename them first (e.g. `mv ~/.config ~/.config_old`).
+
 ## License
 
 Copyright (c) 2025 Peter Cock
