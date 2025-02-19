@@ -42,6 +42,19 @@ $ dotfiles-git checkout
 On a clean/new account, there should be no conflicts. If you already have some local
 configuration files in place, rename them first (e.g. `mv ~/.config ~/.config_old`).
 
+
+## Making changes
+
+> [!WARNING]
+> You cannot do a git rebase with a bare repository, so always do a git pull BEFORE
+> doing any commits, and remember to push the commits to GitHub too!
+
+```console
+$ dotfiles-git pull  # IMPORTANT!
+$ dotfiles-git commit ~/.config/some-file -m "Some changes"
+$ dotfiles-git push
+```
+
 ## License
 
 Copyright (c) 2025 Peter Cock
