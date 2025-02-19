@@ -115,7 +115,7 @@ if [ -d $HOME/.zsh/zsh-syntax-highlighting/ ]; then
     #ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=005
     #ZSH_HIGHLIGHT_STYLES[redirection]=fg=005
 else
-    echo "Missig ~/.zsh/zsh-syntax-highlighting/ from https://github.com/zsh-users/zsh-syntax-highlighting"
+    echo "Missing ~/.zsh/zsh-syntax-highlighting/ from https://github.com/zsh-users/zsh-syntax-highlighting"
 fi
 
 # >>> conda initialize >>>
