@@ -1,0 +1,14 @@
+font-size=18
+clipboard-trim-trailing-spaces = true
+clipboard-paste-protection = false
+copy-on-select = true
+
+keybind = super+plus=increase_font_size:1
+keybind = super+kp_add=increase_font_size:1
+
+# By default these are mapped to Esc b, Esc f
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+
+# This can be left, right or true for both
+macos-option-as-alt = left
