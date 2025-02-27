@@ -91,8 +91,9 @@ S-left = "extend_char_left"
 S-right = "extend_char_right"
 
 [keys.insert]
-ins = "normal_mode"  # make this toggle between normal and insert modes
-k = { j = "normal_mode" }  # map "k,j" to exit insert mode (like escape)
+# Using esc for normal, ins for insert mode as one-way switches.
+# With ins key as a toggle could easily get myself confused about the mode.
+# ins = "normal_mode"  # make this toggle between normal and insert modes
  
 # See also https://github.com/helix-editor/helix/discussions/1211
 # for adding alt+ANY in insert mode to act like ANY in normal mode
