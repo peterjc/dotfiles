@@ -41,8 +41,6 @@ C-q = ":quit-all"
 C-g = ":goto"  # goto line number
 # Copy alternative to Meta+c which gets eaten by Ghostty (?)
 C-c = "yank_to_clipboard"
-# Paste alternative for symmetry, Meta+v works via Ghostty:
-C-v = "paste_clipboard_before"
 
 # Not working in Ghostty, which captures these shortcuts itself:
 # Meta-w = ":q" # Map Apple+w to :quit
@@ -50,19 +48,13 @@ C-v = "paste_clipboard_before"
 # Meta-c
 # Meta-p
 
-# readline shortcuts (want in BOTH normal and insert modes)
+# readline shortcuts (subset wanted in BOTH normal and insert modes)
 C-p = "move_visual_line_up"  # ctrl+p acts like up in bash (last history item)
 C-n = "move_visual_line_down"  # ctrl+n acts like down
 C-b = "move_char_left"
 C-f = "move_char_right"
 C-a = "goto_line_start"
 C-e = "goto_line_end_newline"
-C-w = "delete_word_backward"  # still a default?
-C-u = "kill_to_line_start"  # still a default?
-C-k = "kill_to_line_end"  # still a default?
-C-h = "delete_char_backward"  # aka backspace, still a default
-C-d = "delete_char_forward"  # still a default?
-
 
 # Misc shortcuts I think sound good:
 "#" = "toggle_comments"
@@ -76,10 +68,6 @@ j = "move_char_left"
 k = "move_visual_line_down"
 i = "move_visual_line_up"
 l = "move_char_right"  # stays the same!
-
-# These are only in insert mode by default:
-del = "delete_char_forward"
-backspace = "delete_char_backward"
 
 # Not working until disabled in macOS Mission Control keyboard shortcuts
 # C-up = "extend_line_above"
