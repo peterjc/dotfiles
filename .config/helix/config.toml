@@ -63,11 +63,11 @@ C-e = "goto_line_end_newline"
 ins = "insert_mode"
 
 # Replace row hjkl ←↓↑→ with inverted-t (jkil, i for up), h now insert here:
-h = "insert_mode"  # remember as 'h' for here?
-j = "move_char_left"
-k = "move_visual_line_down"
-i = "move_visual_line_up"
-l = "move_char_right"  # stays the same!
+# h = "insert_mode"  # remember as 'h' for here?
+# j = "move_char_left"
+# k = "move_visual_line_down"
+# i = "move_visual_line_up"
+# l = "move_char_right"  # stays the same!
 
 # Not working until disabled in macOS Mission Control keyboard shortcuts
 # C-up = "extend_line_above"
