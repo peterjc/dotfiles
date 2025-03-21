@@ -4,7 +4,8 @@ This uses a [bare git repository to track config
 files](https://blog.anikethendre.dev/storing-dotfiles-with-bare-git-repository)
 in my macOS and Linux home directory. This is to avoid accidentally checking in
 anything under `$HOME` which is not explicitly tracked.
-MIT License
+
+MIT Licensed.
 
 ## Setup on a new machine
 
