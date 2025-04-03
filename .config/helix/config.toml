@@ -82,13 +82,21 @@ C-right = ["move_next_word_end", "collapse_selection"] # move cursor one word ri
 
 # I quite like the default Alt+cursor tree-sitter controls
 
-# Experiment for classic macOS/Windows style:
+# Shift to extend selection in classic macOS/Windows style:
 # S-up = "extend_line_up"
 # S-down = "extend_line_down"
 S-up = "extend_visual_line_up"
 S-down = "extend_visual_line_down"
 S-left = "extend_char_left"
 S-right = "extend_char_right"
+# Sublime-text shift-ctrl-left/right and shift-alt-left/right are the same:
+S-A-left = "extend_prev_sub_word_start"
+S-A-right = "extend_next_sub_word_start"
+S-C-left = "extend_prev_word_start"
+S-C-right = "extend_next_word_start"
+# And with apple/command/meta, extends selection to start/end of line:
+S-Meta-left = "extend_to_line_start"
+S-Meta-right = "extend_to_line_end"
 
 [keys.insert]
 # Using esc for normal, ins for insert mode as one-way switches.
@@ -138,11 +146,19 @@ C-down = "select_line_below"
 C-left = ["move_prev_word_start" , "collapse_selection"]
 C-right = ["move_next_word_end", "move_char_right"]
 
-# Experiment for classic macOS/Windows style:
+# Shift to extend selection in classic macOS/Windows style:
 S-up = "extend_visual_line_up"
 S-down = "extend_visual_line_down"
 S-left = "extend_char_left"
 S-right = "extend_char_right"
+# Sublime-text shift-ctrl-left/right and shift-alt-left/right are the same:
+S-A-left = "extend_prev_sub_word_start"
+S-A-right = "extend_next_sub_word_start"
+S-C-left = "extend_prev_word_start"
+S-C-right = "extend_next_word_start"
+# And with apple/command/meta, extends selection to start/end of line:
+S-Meta-left = "extend_to_line_start"
+S-Meta-right = "extend_to_line_end"
 
 [keys.select]
 # Replace row hjkl ←↓↑→ with inverted-t (jkil, i for up)
