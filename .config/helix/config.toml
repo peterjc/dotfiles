@@ -70,10 +70,8 @@ ins = "insert_mode"
 # l = "move_char_right"  # stays the same!
 
 # Not working until disabled in macOS Mission Control keyboard shortcuts
-# C-up = "extend_line_above"
-# C-down = "extend_line_below"
-C-up = "select_line_above"
-C-down = "select_line_below"
+C-up = "page_up"
+C-down = "page_down"
 # Based on https://github.com/helix-editor/helix/discussions/5009 and
 # https://github.com/italomaia/helix-non-modal-config/blob/main/config.toml
 C-left = ["move_prev_word_start" , "collapse_selection"]
@@ -138,10 +136,8 @@ C-d = "delete_char_forward"  # still a default?
 S-tab = "unindent"  # bind ctrl+< and ctrl+> for this?
 
 #Not working until disabled in macOS Mission Control keyboard shortcuts
-# C-up = "extend_line_above"
-# C-down = "extend_line_below"
-C-up = "select_line_above"
-C-down = "select_line_below"
+C-up = "page_up"
+C-down = "page_down"
 # Based on https://github.com/helix-editor/helix/discussions/5009
 C-left = ["move_prev_word_start" , "collapse_selection"]
 C-right = ["move_next_word_end", "move_char_right"]
