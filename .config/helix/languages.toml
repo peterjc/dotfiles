@@ -8,8 +8,16 @@ auto-format = true
 
 [[language]]
 name = "python"
-language-servers = ["ruff", "pylsp"]
+language-servers = ["ruff", "pylsp", "codebook"]
 auto-format = true
+
+[[language]]
+name = "markdown"
+language-servers = ["codebook"]
+
+[[language]]
+name = "rst"
+language-servers = ["codebook"]
 
 [language-server.pylsp.config.pylsp.plugins]
 flake8 = {enabled = false}
@@ -20,3 +28,7 @@ pyflakes = {enabled = false}
 pylint = {enabled = false}
 yapf = {enabled = false}
 ruff = {enabled = false}
+
+[language-server.codebook]
+command = "codebook-lsp"
+args = ["serve"]
