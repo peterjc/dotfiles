@@ -5,6 +5,10 @@ files](https://blog.anikethendre.dev/storing-dotfiles-with-bare-git-repository)
 in my macOS and Linux home directory. This is to avoid accidentally checking in
 anything under `$HOME` which is not explicitly tracked.
 
+As of 25 May 2025, I moved the repository from
+[GitHub](https://github.com/peterjc/dotfiles/) to
+[Codeberg](https://codeberg.org/peterjc/dotfiles/), and archived the GitHub copy.
+
 MIT Licensed.
 
 ## Setup on a new machine
